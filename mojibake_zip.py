@@ -63,9 +63,9 @@ def pack(archname, paths=None, flist=None):
     arch.close()
 
 
-def doit(zip_filename, filename_encoding=None):
-    #unpack(zip_filename, filename_encoding)
-    pack('test.zip', paths=[u'.'])  # Force Unicode string, ergo Unicode filenames
+def doit(zip_filename, new_zip_filename, filename_encoding=None,):
+    unpack(zip_filename, filename_encoding)
+    pack(new_zip_filename, paths=[u'.'])  # Force Unicode string, ergo Unicode filenames
 
 
 def main(argv=None):
@@ -75,9 +75,9 @@ def main(argv=None):
     # no error handling, no helpful error message, deal with it :-p
     zip_filename = argv[1]
     filename_encoding = argv[2]
-    filename_encoding = argv[2]
+    new_zip_filename = argv[3]
 
-    doit(zip_filename, filename_encoding)
+    doit(zip_filename, new_zip_filename, filename_encoding)
 
     return 0
 
