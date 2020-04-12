@@ -6,8 +6,8 @@ Give a zip file with non-ascii filenames that are not part of current locale, ex
 
 Usage:
 
-  mojibake_zip.py original.zip filename_encoding new.zip
+    mojibake_zip.py original.zip filename_encoding new.zip
 
 Example usage, extract Japanese zipfile in Western European locale:
 
-  mojibake_zip.py original.zip shiftjis new.zip
+    mojibake_zip.py original.zip shiftjis new.zip
